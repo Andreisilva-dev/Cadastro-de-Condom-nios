@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+}
+
+body {
+    background-color: #f5f5f5;
+    font-size: 1.6rem;
+}
+
+h1 {
+    text-align: center;
+}
+.container {
+    background-color: #ede9e9;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 1.0rem;
+}
+
+.caixaCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.caixaCadastro input {
+    width: fit-content;
+    padding: 1.0rem;
+}
+
+/* .caixaCadastro textarea {
+    width: fit-content;
+    padding: 1.0rem;
+} */
+
+.caixaConsultado {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.caixaConsultado input {
+    width: fit-content;
+    padding: 1.0rem;
+}
+
+button {
+    width: fit-content;
+    padding: 1.0rem;
+}
