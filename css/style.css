@@ -23,12 +23,26 @@ h1 {
     justify-content: space-around;
     /* align-items: center; */
     padding: 1.0rem;
+    gap: 1.0rem;
 }
 
 .caixaCadastro {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+.modal_atualizar {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 0.8rem;
+    background-color: #ede9e9;
+    /* display: inline-flex; */
+}
+
+.modal_atualizar input {
+    padding: 1.0rem;
 }
 
 .caixaCadastro input {
@@ -52,10 +66,16 @@ h1 {
     padding: 1.0rem;
 }
 
+.atualizarInput {
+    width: fit-content;
+    padding: 1.0rem;
+}
+
 button {
     width: fit-content;
     padding: 1.0rem;
 }
+
 
 .consultadaCor {
     width: 230px;
