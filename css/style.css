@@ -56,3 +56,10 @@ button {
     width: fit-content;
     padding: 1.0rem;
 }
+
+.consultadaCor {
+    width: 230px;
+    background-color: rgb(29, 29, 213);
+    padding: 1.0rem;
+    color: white;
+}

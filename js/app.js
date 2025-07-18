@@ -15,6 +15,7 @@ let btnConsulta = document.querySelector('.btnConsultar')
 // base de dados
 let base = []
 
+// FUNCAO DE CADASTRAR CONDOMINIO
 btnCadastrar.addEventListener('click', () => {
     let nomeComdominio = CxNomeCondominio.value
     let endereco = CxEndereco.value
@@ -31,27 +32,51 @@ btnCadastrar.addEventListener('click', () => {
 
     localStorage.setItem('bd',JSON.stringify(base))
     // console.log(`${nomeComdominio} / ${endereco} / ${obs}`)
+
+    setTimeout(()=>{
+        limpar()
+    },100)
 })
 
 btnConsulta.addEventListener('click', () => {
-    let consultando = CxConsulta.value.toLowerCase()
+    // caixa de saida de dados
+    let consulta = CxConsulta.value
+   
+    let baseDeDados = JSON.parse(localStorage.getItem('bd'))
+    
+    let condominioBuscado = baseDeDados.find(condominio => {
+        return condominio.nome == consulta
+    })
 
-    let baseSalva = JSON.parse(localStorage.getItem('bd'))
-
-    let buscando = baseSalva.find(condominio => condominio.nome === consultando) //retunr ou um true ou false
-
-    if(buscando){
-        obsConsulta.textContent = `Endereço: ${buscando.endereco}, Observação: ${buscando.observacao}`
+    console.log(condominioBuscado)
+    if(condominioBuscado){
+        obsConsulta.textContent = `Condominio ${condominioBuscado.nome}  encontrado Endereço: ${condominioBuscado.endereco} Observações: ${condominioBuscado.observacao}`
+        obsConsulta.classList.add("consultadaCor")
     }else {
-        obsConsulta.textContent = 'Condomínio não encontrado.';
+        obsConsulta.textContent = `Busca não encontrada`
+        obsConsulta.classList.remove('consultadaCor')
     }
-
-    // console.log(buscando)
-    // console.log(baseSalva)
-    // console.log('funcionando')
-    
-    
 })
 
 
 
+
+
+// btn limpar cadastro e consulta
+let btnLimparCadastra = document.querySelector(".btnLimparCadastra")
+let btnLimparConsulta = document.querySelector('.btnLimparConsulta')
+function limpar(){
+    CxNomeCondominio.value = ''
+    CxEndereco.value = ''
+    CxObs.value = ''
+    
+}
+
+function limparConsulta(){
+    CxConsulta.value = ''
+    obsConsulta.classList.remove('consultadaCor')
+    obsConsulta.textContent = ''
+}
+
+btnLimparCadastra.addEventListener('click', limpar)
+btnLimparConsulta.addEventListener('click',limparConsulta)

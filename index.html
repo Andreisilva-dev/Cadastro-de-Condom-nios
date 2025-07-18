@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistem de Condominio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Sistema de Cadastro de Condominio</h1>
+    <h1>Sistema de Condominio</h1>
     <div class="container">
 
         <div class="caixaCadastro">
+            <h1>Cadastro de Condomínio</h1>
             <label>Nome Do Condominio</label>
             <input type="text" class="nomeDoCondomio">
             <Label>Endereço</Label>
@@ -19,15 +20,22 @@
             <label>Observação</label>
             <textarea name="obs" class="obs" rows="5" cols="33">
             </textarea>
-            <button class="btnCadastrar">Cadastrar</button>
+            <div class="buttons">
+                <button class="btnCadastrar">Cadastrar</button>
+                <button class="btnLimparCadastra">Limpar</button>
+            </div>
         </div>
 
         <div class="caixaConsultado">
+            <h1>Consulta</h1>
             <label for="">nome do Condominio</label>
-            <input type="text" placeholder="digite o nome condomio que deseja ver o historico" class="inputconsulta">
-            <button class="btnConsultar">consultar</button>
-            <div>
-                <p class="resuldadoConsulta">teste</p>
+            <input type="text" placeholder="digite o nome condomio" class="inputconsulta">
+            <div class="butttons">
+                <button class="btnConsultar">consultar</button>
+                <button class="btnLimparConsulta">Limpar</button>
+            </div>
+            <div class="pdfConsulta">
+                <p class="resuldadoConsulta"></p>
             </div>
         </div>
     </div>
