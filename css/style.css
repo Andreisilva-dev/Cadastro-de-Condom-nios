@@ -27,10 +27,35 @@ h1 {
 }
 
 .caixaCadastro {
+    background-color: white;
+    border-radius: 0.8rem;
+    /* padding: 1.0rem; */
+}
+
+.caixaCadastro h1 {
+    background-color: blue;
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+    color: white;
+    padding: 0.5rem;
+}
+.form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    padding: 1.0rem;
+    gap: .5rem;
 }
+
+.form button{
+    background-color: green;
+    border-radius: 0.8rem;
+    color: white;
+    border: none;
+}
+
+.form button:nth-child(2){
+    background-color: red;
+}
+
 
 .modal_atualizar {
     display: flex;
@@ -61,6 +86,9 @@ h1 {
     gap: 0.8rem;
 }
 
+input , textarea {
+    border-radius: 0.5rem;
+}
 .caixaConsultado input {
     width: fit-content;
     padding: 1.0rem;
@@ -82,4 +110,15 @@ button {
     background-color: rgb(29, 29, 213);
     padding: 1.0rem;
     color: white;
+}
+
+.modal_deletar_dados {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.modal_deletar_dados input {
+    padding: 0.5rem;
+    width: fit-content;
 }

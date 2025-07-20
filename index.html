@@ -12,17 +12,19 @@
 
         <div class="caixaCadastro">
             <h1>Cadastro de Condomínio</h1>
-            <label>Nome Do Condominio</label>
-            <input type="text" class="nomeDoCondomio">
-            <Label>Endereço</Label>
-            <input type="text" class="endereco">
-            
-            <label>Observação</label>
-            <textarea name="obs" class="obs" rows="5" cols="33">
-            </textarea>
-            <div class="buttons">
-                <button class="btnCadastrar">Cadastrar</button>
-                <button class="btnLimparCadastra">Limpar</button>
+            <div class="form">
+                <label>Nome Do Condominio</label>
+                <input type="text" class="nomeDoCondomio">
+                <Label>Endereço</Label>
+                <input type="text" class="endereco">
+                
+                <label>Observação</label>
+                <textarea name="obs" class="obs" rows="5" cols="33">
+                </textarea>
+                <div class="buttons">
+                    <button class="btnCadastrar">Cadastrar</button>
+                    <button class="btnLimparCadastra">Limpar</button>
+                </div>
             </div>
         </div>
 
@@ -58,6 +60,13 @@
             <button class="btnAtulizar">Atualizar</button>
             <button class="btnFechar">fechar</button>
         </div>
+    </div>
+
+    <div class="modal_deletar_dados">
+        <h1>deletar condominio</h1>
+        <label>Qual condominio quer deletar</label>
+        <input type="text" class="deleta_condominio">
+        <button class="btnDeletar">Deletar</button>
     </div>
     <script src="js/app.js"></script>
 </body>

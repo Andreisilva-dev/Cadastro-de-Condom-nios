@@ -109,3 +109,22 @@ btnBucarAtualizar.addEventListener("click", () => {
     localStorage.setItem('bd', JSON.stringify(baseDeDados))
   });
 });
+
+
+
+// MODAL DE DELETAR DADOS
+let modal_deletar_dados = document.querySelector('.modal_deletar_dados')
+let deleta_condominio = document.querySelector('.deleta_condominio')
+let btnDeletar = document.querySelector('.btnDeletar')
+
+btnDeletar.addEventListener('click',()=>{
+  let inputdeletar = deleta_condominio.value
+
+  let baseDeDados = JSON.parse(localStorage.getItem('bd'))
+
+  baseDeDados = baseDeDados.filter(condominio => {
+    return condominio.nome != inputdeletar
+  })
+
+  localStorage.setItem('bd', JSON.stringify(baseDeDados))
+})
