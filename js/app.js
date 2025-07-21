@@ -85,8 +85,16 @@ let btnFechar = document.querySelector(".btnFechar");
 // SESSAO ATUALIZAÇÃO
 
 let btnBucarAtualizar = document.querySelector(".btnBucarAtualizar");
+let modal_atualizar = document.querySelector(".modal_atualizar")
 
 btnBucarAtualizar.addEventListener("click", () => {
+
+  modal_atualizar.style.display = 'flex';
+  let fecharatualizar = document.querySelector('.btnFechar')
+  btnFechar.addEventListener('click',()=>{
+    modal_atualizar.style.display = 'none';
+  })
+  
   let inputCondominioAtualizar = document.querySelector(
     ".inputCondominioAtualizar"
   ).value;
@@ -102,29 +110,62 @@ btnBucarAtualizar.addEventListener("click", () => {
   atulizaoObs.value = busca.observacao;
 
   btnAtulizar.addEventListener("click", () => {
-    busca.nome = atulizaNome.value
-    busca.endereco = atulizaEndereco.value
-    busca.observacao = atulizaoObs.value
+    busca.nome = atulizaNome.value;
+    busca.endereco = atulizaEndereco.value;
+    busca.observacao = atulizaoObs.value;
 
-    localStorage.setItem('bd', JSON.stringify(baseDeDados))
+    localStorage.setItem("bd", JSON.stringify(baseDeDados));
   });
 });
 
-
-
 // MODAL DE DELETAR DADOS
-let modal_deletar_dados = document.querySelector('.modal_deletar_dados')
-let deleta_condominio = document.querySelector('.deleta_condominio')
-let btnDeletar = document.querySelector('.btnDeletar')
+let modal_deletar_dados = document.querySelector(".modal_deletar_dados");
+let deleta_condominio = document.querySelector(".deleta_condominio");
+let btnDeletar = document.querySelector(".btnDeletar");
 
-btnDeletar.addEventListener('click',()=>{
-  let inputdeletar = deleta_condominio.value
+modal_deletar_dados.style.display = 'none'
 
-  let baseDeDados = JSON.parse(localStorage.getItem('bd'))
+let btnCadDeletar = document.querySelector('.btnCadDeletar')
+btnCadDeletar.addEventListener('click',()=>{
+  modal_deletar_dados.style.display = 'flex'
+})
+btnDeletar.addEventListener("click", () => {
+  let inputdeletar = deleta_condominio.value;
+  let btnFecharDelete = document.querySelector('.btnFecharDelete')
 
-  baseDeDados = baseDeDados.filter(condominio => {
-    return condominio.nome != inputdeletar
+  btnFecharDelete.addEventListener('click',()=> {
+    modal_deletar_dados.style.display = 'none'
   })
 
-  localStorage.setItem('bd', JSON.stringify(baseDeDados))
+  let baseDeDados = JSON.parse(localStorage.getItem("bd"));
+
+  baseDeDados = baseDeDados.filter((condominio) => {
+    return condominio.nome != inputdeletar;
+  });
+
+  localStorage.setItem("bd", JSON.stringify(baseDeDados));
+});
+
+let cad_consultar = document.querySelector(".cad_consultar");
+let caixaConsultado = document.querySelector('.caixaConsultado')
+cad_consultar.addEventListener('click',()=>{
+  caixaConsultado.classList.add('mostrar')
+  let fecharaba = document.querySelector('.fecha')
+  fecharaba.addEventListener('click',()=>{
+    caixaConsultado.classList.remove('mostrar')
+  })
 })
+
+
+let buscaAtualizar = document.querySelector('.buscaAtualizar')
+let btnCadatualizar = document.querySelector('.btnCadatualizar')
+btnCadatualizar.addEventListener('click',()=>{
+  buscaAtualizar.style.display = 'block'
+  let fechaatualiza = document.querySelector('.fechaatualiza')
+  fechaatualiza.addEventListener('click',()=>{
+    buscaAtualizar.style.display = 'none'
+  })
+})
+
+
+

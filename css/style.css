@@ -14,6 +14,8 @@ body {
     font-size: 1.6rem;
 }
 
+
+
 h1 {
     text-align: center;
 }
@@ -45,15 +47,39 @@ h1 {
     gap: .5rem;
 }
 
+
 .form button{
     background-color: green;
-    border-radius: 0.8rem;
+    
     color: white;
     border: none;
+    /* padding: 0.8rem; */
+    /* display: flex; */
+    gap: 0.9rem; 
+}
+
+button {
+    padding: 0.8rem;
+    border-radius: 0.8rem;
 }
 
 .form button:nth-child(2){
+    background-color: #343a40;
+}
+
+.form button:nth-child(3){
+    background-color: yellow;
+    color: black;
+}
+
+.form button:nth-child(4){
+    background-color: brown;
+    color: white;
+}
+
+.form button:nth-child(5){
     background-color: red;
+    color: white;
 }
 
 
@@ -64,6 +90,7 @@ h1 {
     gap: 0.8rem;
     background-color: #ede9e9;
     /* display: inline-flex; */
+    display: none;
 }
 
 .modal_atualizar input {
@@ -83,7 +110,18 @@ h1 {
 .caixaConsultado {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+.caixaConsultado button:nth-child(1){
+    background-color: brown;
+}
+.caixaConsultado button:nth-child(2){
+    background-color: #343a40;
 }
 
 input , textarea {
@@ -99,10 +137,10 @@ input , textarea {
     padding: 1.0rem;
 }
 
-button {
+/* button {
     width: fit-content;
     padding: 1.0rem;
-}
+} */
 
 
 .consultadaCor {
@@ -121,4 +159,16 @@ button {
 .modal_deletar_dados input {
     padding: 0.5rem;
     width: fit-content;
+}
+
+.buscaAtualizar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    display: none;
+}
+
+.buscaAtualizar input, button {
+    width: fit-content;
+    padding: 0.8rem;
 }
