@@ -167,5 +167,9 @@ btnCadatualizar.addEventListener('click',()=>{
   })
 })
 
+let btnFecharDelete = document.querySelector('.btnFecharDelete')
 
+  btnFecharDelete.addEventListener('click',()=> {
+    modal_deletar_dados.style.display = 'none'
+  })
 
