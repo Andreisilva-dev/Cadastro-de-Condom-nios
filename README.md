@@ -37,6 +37,9 @@ Com isso, foi possível tornar o acompanhamento mais eficiente, evitar retrabalh
 - JavaScript (Vanilla JS)  
 - `localStorage` (armazenamento local do navegador)
 
+## imagem
+![alt text](image.png)
+
 ---
 
 
