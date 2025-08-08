@@ -47,32 +47,32 @@ Interface para usuários não técnicos
 Organização do histórico de cada condomínio
 🛠️ Solução: estrutura em linha do tempo, com associação direta entre condomínio e suas ocorrências.
 
-4. ⚙️ Decisões técnicas e seus trade-offs
-JavaScript puro ao invés de frameworks (como React/Vue)
-✅ Mais leve, mais rápido, sem build ou dependências
-❌ Menos modular, mas ideal para um projeto com escopo controlado
+## 4. ⚙️ Decisões técnicas e seus trade-offs
 
-localStorage como banco de dados
-✅ Simples, offline, zero configuração
-❌ Limitado em tamanho e acesso multiusuário (mas atende ao uso individual/local)
+### JavaScript puro ao invés de frameworks (como React/Vue)
+- ✅ Mais leve, mais rápido, sem build ou dependências  
+- ❌ Menos modular, mas ideal para um projeto com escopo controlado
 
-HTML/CSS puro
-✅ Controle total e aprendizado profundo dos fundamentos
-❌ Mais trabalho para responsividade e manutenção em larga escala
+### localStorage como banco de dados
+- ✅ Simples, offline, zero configuração  
+- ❌ Limitado em tamanho e acesso multiusuário (mas atende ao uso individual/local)
 
-5. 📚 Aprendizados e próximos passos
-💡 O que aprendi:
-Como transformar uma dor real do dia a dia em um projeto útil
+### HTML/CSS puro
+- ✅ Controle total e aprendizado profundo dos fundamentos  
+- ❌ Mais trabalho para responsividade e manutenção em larga escala
 
-A importância da clareza na experiência do usuário (UX)
+---
 
-Fundamentos de persistência de dados no navegador com localStorage
+## 5. 📚 Aprendizados e próximos passos
 
-🛠️ Próximos passos:
-Adicionar autenticação simples para múltiplos usuários
+### 💡 O que aprendi:
+- Como transformar uma **dor real** do dia a dia em um projeto útil
+- A importância da clareza na experiência do usuário (UX)
+- Fundamentos de persistência de dados no navegador com `localStorage`
 
-Exportação dos dados para PDF ou Excel
+### 🛠️ Próximos passos:
+- Adicionar autenticação simples para múltiplos usuários
+- Exportação dos dados para PDF ou Excel
+- Versão mobile com melhorias de responsividade
+- Sincronização com backend para persistência em nuvem
 
-Versão mobile com melhorias de responsividade
-
-Sincronização com backend para persistência em nuvem
