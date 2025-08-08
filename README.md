@@ -37,15 +37,17 @@ Criei um sistema de gestão de condomínios **100% em JavaScript puro**, que rod
 ### 📸 Screenshots / Demonstração
 ![alt text](image.png)
 
-3. ⚔️ Desafios enfrentados e como foram superados
-Persistência de dados sem backend
-🛠️ Solução: uso estratégico do localStorage para manter dados acessíveis e seguros no próprio navegador.
+## 3. ⚔️ Desafios enfrentados e como foram superados
 
-Interface para usuários não técnicos
-🛠️ Solução: foco em UX simples, com campos claros e navegação direta.
+### Persistência de dados sem backend
+- 🛠️ **Solução:** uso estratégico do `localStorage` para manter dados acessíveis e seguros no próprio navegador.
 
-Organização do histórico de cada condomínio
-🛠️ Solução: estrutura em linha do tempo, com associação direta entre condomínio e suas ocorrências.
+### Interface para usuários não técnicos
+- 🛠️ **Solução:** foco em UX simples, com campos claros e navegação direta.
+
+### Organização do histórico de cada condomínio
+- 🛠️ **Solução:** estrutura em linha do tempo, com associação direta entre condomínio e suas ocorrências.
+
 
 ## 4. ⚙️ Decisões técnicas e seus trade-offs
 
